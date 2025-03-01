@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-itens: center;
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+  }
+  
+  header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 0 0 0;
+  }
+  
+  header>img {
+      cursor: pointer;
+      width: 13rem;
+  }
+  
+  .mainTitles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 27rem;
+  }
+  
+  #firstTitle {
+    text-align: center;
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out forwards;
+    width: 35rem
+  }
+  
+  #secondTitle {
+    display: none;
+    text-align: center;
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out forwards;
+    width: 30rem;
+  }
+  
+  .toConcert {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #letsGo {
+    color: white;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    position: fixed;
+    bottom: 1.5rem;
+    cursor: pointer;
+    width: 15rem;
+  }
+  
+  #letsGo:hover {
+    background-color: #0B0B0B;
+  }
+  
+  #letsGo:active {
+    background-color: black;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
