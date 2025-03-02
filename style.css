@@ -27,15 +27,16 @@ header>img {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Libre Baskerville", serif;
   color: white;
   height: 100vh;
 }
 
 #firstTitle {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.8rem;
   animation: fadeIn 2s ease-in-out forwards;
-  width: 35rem
+  width: 45rem;
 }
 
 #secondTitle {
@@ -79,5 +80,12 @@ header>img {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  #firstTitle, #secondTitle {
+    font-size: 3rem;
+    width: 90%;
   }
 }
