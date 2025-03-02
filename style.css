@@ -99,6 +99,10 @@ header>img {
 }
 
 @media (max-width: 600px) {
+  .mainTitles {
+    height: 80vh;
+  }
+  
   #firstTitle, #secondTitle {
     font-size: 3rem;
     width: 90%;
