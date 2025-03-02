@@ -5,6 +5,9 @@ body {
   justify-content: center;
   background-color: black;
   margin: 0;
+  position: relative;
+  opacity: 1;
+  animation: toTop 2s;
   height: 100vh;
 }
 
@@ -28,6 +31,7 @@ header>img {
   justify-content: center;
   align-items: center;
   font-family: "Libre Baskerville", serif;
+  font-weight: 400;
   color: white;
   height: 100vh;
 }
@@ -67,11 +71,22 @@ header>img {
 }
 
 #letsGo:hover {
-  background-color: #0B0B0B;
+  background-color: rgba(202, 42, 58, 0.25);
 }
 
 #letsGo:active {
   background-color: black;
+}
+
+@keyframes toTop {
+  0% {
+    transform: translateY(+100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
