@@ -78,6 +78,38 @@ header>img {
   background-color: black;
 }
 
+.cover {
+  display: none;
+  justify-content: center;
+  animation: toTop 2s;
+}
+
+.cover>img {
+  border: 2px solid #121212;
+  height: 95vh;
+}
+
+.introduction {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  color: white;
+  animation: toTop 2s;
+}
+
+.introduction>h2 {
+  font-size: 20pt;
+}
+
+.introduction>div {
+  text-align: right;
+}
+
+.introduction>h2, .introduction>p, .introduction>div>p {
+  width: 30rem;
+}
+
 @keyframes toTop {
   0% {
     transform: translateY(+100%);
@@ -98,13 +130,28 @@ header>img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .mainTitles {
-    height: 80vh;
+    height: 90vh;
   }
   
   #firstTitle, #secondTitle {
     font-size: 3rem;
+    margin: 0;
     width: 90%;
+  }
+  
+  .cover>img {
+    height: 90%;
+    width: 90%;
+  }
+  
+  .introduction>div {
+    text-align: right;
+    width: 110%;
+  }
+  
+  .introduction>h2, .introduction>p, .introduction>div>p {
+  width: 90%;
   }
 }
