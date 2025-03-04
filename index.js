@@ -9,11 +9,11 @@ const titleTwo = document.getElementById("secondTitle");
 
 const letsGo = document.getElementById("letsGo");
 
-
-
 const previousImage = document.getElementById("previousImage");
 const placeImages = document.getElementById("placeImages");
 const nextImage = document.getElementById("nextImage");
+
+alert("Para uma experiência melhor, use a tela na horizontal, caso o Usuário esteja no celular.");
 
 var index = 0;
 var indexAlbum = 0;
