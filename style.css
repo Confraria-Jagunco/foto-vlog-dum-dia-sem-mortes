@@ -116,6 +116,31 @@ header > img {
   color: #ffffff;
 }
 
+.killButton {
+  font-family: "Libre Baskerville", serif;
+  color: white;
+  font-size: 0.8rem;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0.3rem 0.3rem 0 0.3rem;
+  position: fixed;
+  top: 0.8rem;
+  right: 2rem;
+  cursor: pointer;
+  animation: fadeIn 15s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.killButton:hover {
+  color: #ca2a39;
+}
+
+.killButton:active {
+  color: white;
+  transition: 0s ease-in-out;
+}
+
 @keyframes toTop {
   0% {
     transform: translateY(+100%);
