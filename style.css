@@ -12,18 +12,18 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3rem 0 0 0;
-    position: fixed;
-    top: 0.3rem;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0 0 0;
+  position: fixed;
+  top: 0.3rem;
+  width: 100%;
 }
 
-header>img {
-    cursor: pointer;
-    width: 13rem;
+header > img {
+  cursor: pointer;
+  width: 13rem;
 }
 
 .mainTitles {
@@ -78,36 +78,43 @@ header>img {
   background-color: black;
 }
 
-.cover {
+.galery {
   display: none;
   justify-content: center;
+  align-items: center;
   animation: toTop 2s;
 }
 
-.cover>img {
+.galery > img {
   border: 2px solid #121212;
   height: 95vh;
 }
 
-.introduction {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: justify;
+#previousImage {
+  position: fixed;
+  left: 2rem;
+}
+
+#nextImage {
+  position: fixed;
+  right: 2rem;
+}
+
+.buttonChangeImages {
+  font-size: 1.5rem;
   color: white;
-  animation: toTop 2s;
+  background-color: transparent;
+  border: none;
+  height: 20px;
+  width: 20px;
 }
 
-.introduction>h2 {
-  font-size: 20pt;
+.buttonChangeImages:hover {
+  color: #ca2a39;
 }
 
-.introduction>div {
-  text-align: right;
-}
-
-.introduction>h2, .introduction>p, .introduction>div>p {
-  width: 30rem;
+.buttonChangeImages:active {
+  color: #ffffff;
 }
 
 @keyframes toTop {
@@ -134,24 +141,16 @@ header>img {
   .mainTitles {
     height: 90vh;
   }
-  
-  #firstTitle, #secondTitle {
+
+  #firstTitle,
+  #secondTitle {
     font-size: 3rem;
     margin: 0;
     width: 90%;
   }
-  
-  .cover>img {
+
+  .galery > img {
     height: 90%;
     width: 90%;
-  }
-  
-  .introduction>div {
-    text-align: right;
-    width: 110%;
-  }
-  
-  .introduction>h2, .introduction>p, .introduction>div>p {
-  width: 90%;
   }
 }
