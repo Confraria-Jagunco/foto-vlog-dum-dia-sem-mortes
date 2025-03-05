@@ -286,4 +286,13 @@ footer>img {
     height: 90%;
     width: 90%;
   }
+  
+  .thanks>div {
+    width: 90%;
+}
+.thanks>div>img {
+  width: 100%;
+}
+.writerProfile>div>p {
+  width: 90%;
 }
