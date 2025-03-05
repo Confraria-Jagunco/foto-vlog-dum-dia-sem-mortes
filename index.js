@@ -1,7 +1,7 @@
 const body = document.getElementById("body");
 
 const header = document.getElementById("header");
-const main = document.getElementById("main");
+const cover = document.getElementById("cover");
 const toConcert = document.getElementById("toConcert");
 
 const titleOne = document.getElementById("firstTitle");
@@ -13,7 +13,14 @@ const previousImage = document.getElementById("previousImage");
 const placeImages = document.getElementById("placeImages");
 const nextImage = document.getElementById("nextImage");
 
-alert("Para uma experiência melhor, use a tela na horizontal, caso o Usuário esteja no celular.");
+const killButton = document.getElementById("killButton");
+
+const thanks = document.getElementById("thanks");
+const writerProfile = document.getElementById("writerProfile");
+const footer = document.getElementById("footer");
+
+
+//alert("Para uma experiência melhor, use a tela na horizontal, caso o Usuário esteja no celular, ou a tela maximizada. Obrigado.");
 
 var index = 0;
 var indexAlbum = 0;
@@ -31,7 +38,7 @@ function changeIndex() {
 
 function goToConcert() {
   header.style.display = "none";
-  main.style.display = "none";
+  cover.style.display = "none";
   toConcert.style.display = "none";
   galery.style.display = "flex";
 }
@@ -39,7 +46,7 @@ function goToConcert() {
 var album = [
   "https://i.imgur.com/gLDfrLH.jpeg",
   "https://i.imgur.com/8DHfItE.png",
-  "https://i.imgur.com/akSj7R5.jpeg",   
+  "https://i.imgur.com/akSj7R5.jpeg",
   "https://i.imgur.com/AGE1odA.png",
   "https://i.imgur.com/XcplBPJ.jpeg",
   "https://i.imgur.com/Z6pNOQ6.png",
@@ -95,8 +102,18 @@ function showPreviousImage() {
   }
 }
 
+function goToFinal() {
+  galery.style.display = "none";
+  header.style.display = "flex";
+  header.style.position = "relative";
+  thanks.style.display = "flex";
+  writerProfile.style.display = "flex";
+  footer.style.display = "flex";
+}
+
 setInterval(changeIndex, 5000);
 
 letsGo.addEventListener("click", goToConcert);
 nextImage.addEventListener("click", showNextImage);
 previousImage.addEventListener("click", showPreviousImage);
+killButton.addEventListener("click", goToFinal);
