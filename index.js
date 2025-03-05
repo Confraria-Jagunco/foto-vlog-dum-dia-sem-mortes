@@ -103,6 +103,7 @@ function showPreviousImage() {
 }
 
 function goToFinal() {
+  body.style.height = "100%";
   galery.style.display = "none";
   header.style.display = "flex";
   header.style.position = "relative";
