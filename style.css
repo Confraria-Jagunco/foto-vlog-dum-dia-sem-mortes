@@ -5,10 +5,9 @@ body {
   justify-content: center;
   background-color: black;
   margin: 0;
-  position: relative;
   opacity: 1;
   animation: toTop 2s;
-  height: 100vh;
+  height: 100%;
 }
 
 header {
@@ -47,7 +46,7 @@ header > img {
   display: none;
   text-align: center;
   font-size: 3rem;
-  animation: fadeIn 2s ease-in-out forwards;
+  transition: 1s ease-in-out;
   width: 30rem;
 }
 
@@ -134,11 +133,121 @@ header > img {
 
 .killButton:hover {
   color: #ca2a39;
+  font-size: 1rem;
+  right: 1.4rem;
 }
 
 .killButton:active {
   color: white;
   transition: 0s ease-in-out;
+}
+
+.thanks {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 5rem 0 0 0; 
+}
+
+.thanks>div {
+    width: 38rem;
+}
+
+.titleThanks {
+  margin: 0 0 2.5rem 0;
+}
+
+.titleThanks>p {
+  font-family: "Lexend Deca", serif;
+  font-size: 10pt;
+  font-weight: 300;
+  margin: 0;
+}
+
+.titleThanks>h1 {
+  font-size: 30pt;
+  font-family: "Open Sans", serif;
+  margin: 0;
+}
+
+.thanks>div>p {
+  font-family: "Lexend Deca", serif;
+  font-size: 13pt; 
+  margin-bottom: 3rem;
+}
+
+.thanks>div>img {
+  width: 38rem;
+}
+
+.writerProfile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 4rem 0;
+}
+
+.writerProfile>img {
+    width: 6rem;
+    clip-path: circle();
+}
+
+.writerProfile>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.writerProfile>div>h4 {
+  color: white;
+    font-family: "Open Sans", serif;
+    text-align: center;
+    margin: 0 0 0.3rem 0;
+}
+
+.writerProfile>div>p {
+  color: white;
+    font-family: "Lexend Deca", serif;
+    text-align: center;
+    font-size: 10pt;
+    margin: 0;
+  width: 32rem;
+}
+
+footer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+footer>img {
+    margin: 0;
+    cursor: pointer;
+    width: 8rem;
+}
+
+.socialWides {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+.socialWides>p>a {
+    color: #ffffff;
+}
+
+.socialWides>p>a:active {
+    color: rgb(72, 72, 72);
+}
+
+#copyright {
+    color: rgb(255, 255, 255);
+    font-family: "Lexend Deca", serif;
+    font-size: 10pt;
+    margin: 1.5rem 0 0 0;
 }
 
 @keyframes toTop {
