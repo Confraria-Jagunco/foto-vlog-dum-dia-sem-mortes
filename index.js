@@ -58,7 +58,7 @@ const album = [
   "https://i.imgur.com/8wiwGDX.png"
 ];
 
-//alert("Para uma experiência melhor, use a tela na horizontal, caso o Usuário esteja no celular, ou a tela maximizada. Obrigado.");
+alert("Para uma experiência melhor, use a tela na horizontal, caso o Usuário esteja no celular, ou a tela maximizada. Obrigado.");
 
 var index = 0;
 var indexAlbum = 0;
