@@ -6,7 +6,6 @@ body {
   background-color: black;
   margin: 0;
   opacity: 1;
-  animation: toTop 2s;
   height: 100vh;
 }
 
@@ -18,6 +17,7 @@ header {
   position: fixed;
   top: 0.3rem;
   width: 100%;
+  animation: toTop 2s;
 }
 
 header > img {
@@ -33,6 +33,7 @@ header > img {
   font-weight: 400;
   color: white;
   height: 100vh;
+  animation: toTop 2s;
 }
 
 #firstTitle {
@@ -46,7 +47,7 @@ header > img {
   display: none;
   text-align: center;
   font-size: 3rem;
-  transition: 1s ease-in-out;
+  animation: fadeIn 2s ease-in-out forwards;
   width: 30rem;
 }
 
@@ -54,6 +55,7 @@ header > img {
   display: flex;
   justify-content: center;
   width: 100%;
+  animation: fadeIn 15s;
 }
 
 #letsGo {
@@ -81,7 +83,7 @@ header > img {
   display: none;
   justify-content: center;
   align-items: center;
-  animation: toTop 2s;
+  animation: toRight 2s;
 }
 
 .galery > img {
@@ -89,6 +91,7 @@ header > img {
 }
 
 #previousImage {
+  display: none;
   position: fixed;
   left: 2rem;
 }
@@ -105,6 +108,7 @@ header > img {
   border: none;
   height: 20px;
   width: 20px;
+  cursor: pointer;
 }
 
 .buttonChangeImages:hover {
@@ -115,31 +119,27 @@ header > img {
   color: #ffffff;
 }
 
+.divKillButton {
+  display: none;
+  justify-content: center;
+}
+
 .killButton {
-  font-family: "Libre Baskerville", serif;
+  font-size: 12pt;
   color: white;
-  font-size: 0.8rem;
   background-color: transparent;
-  border: 0;
-  border-bottom: 1px solid transparent;
-  padding: 0.3rem 0.3rem 0 0.3rem;
-  position: fixed;
-  top: 0.8rem;
-  right: 2rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  animation: fadeIn 15s ease-in-out;
-  transition: 1s ease-in-out;
 }
 
 .killButton:hover {
-  color: #ca2a39;
-  font-size: 1rem;
-  right: 1.4rem;
+  background-color: rgba(202, 42, 58, 0.25);
 }
 
 .killButton:active {
-  color: white;
-  transition: 0s ease-in-out;
+  color: transparent;
 }
 
 .thanks {
@@ -147,7 +147,8 @@ header > img {
   flex-direction: column;
   align-items: center;
   color: white;
-  margin: 5rem 0 0 0; 
+  margin: 5rem 0 0 0;
+  animation: toTop 2s;
 }
 
 .thanks>div {
@@ -172,6 +173,7 @@ header > img {
 }
 
 .thanks>div>p {
+  text-align: justify;
   font-family: "Lexend Deca", serif;
   font-size: 13pt; 
   margin-bottom: 3rem;
@@ -270,6 +272,17 @@ footer>img {
   }
 }
 
+@keyframes toRight {
+  0% {
+    transform: translateX(+100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 750px) {
   .mainTitles {
     height: 90vh;
@@ -287,7 +300,7 @@ footer>img {
 }
 
 #nextImage {
-  right: 0;
+  right: 1rem;
 }
 
   .galery > img {
