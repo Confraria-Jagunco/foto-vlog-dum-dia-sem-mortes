@@ -13,36 +13,14 @@ const previousImage = document.getElementById("previousImage");
 const placeImages = document.getElementById("placeImages");
 const nextImage = document.getElementById("nextImage");
 
+const divKillButton = document.getElementById("divKillButton");
 const killButton = document.getElementById("killButton");
 
 const thanks = document.getElementById("thanks");
 const writerProfile = document.getElementById("writerProfile");
 const footer = document.getElementById("footer");
 
-alert("Para uma experiência melhor, use a tela na horizontal, caso o Usuário esteja no celular, ou a tela maximizada. Obrigado.");
-
-var index = 0;
-var indexAlbum = 0;
-
-function changeIndex() {
-  titleOne.style.display = "none";
-  titleTwo.style.display = "flex";
-  index++;
-  if (index > 1) {
-    index = 0;
-    titleOne.style.display = "flex";
-    titleTwo.style.display = "none";
-  }
-}
-
-function goToConcert() {
-  header.style.display = "none";
-  cover.style.display = "none";
-  toConcert.style.display = "none";
-  galery.style.display = "flex";
-}
-
-var album = [
+const album = [
   "https://i.imgur.com/gLDfrLH.jpeg",
   "https://i.imgur.com/8DHfItE.png",
   "https://i.imgur.com/akSj7R5.jpeg",
@@ -77,9 +55,31 @@ var album = [
   "https://i.imgur.com/yIkUpRf.png",
   "https://i.imgur.com/ho1GKny.jpeg",
   "https://i.imgur.com/JXNU4iA.png",
-  "https://i.imgur.com/8wiwGDX.png",
-  "https://i.imgur.com/uNN4ssY.jpeg"
+  "https://i.imgur.com/8wiwGDX.png"
 ];
+
+//alert("Para uma experiência melhor, use a tela na horizontal, caso o Usuário esteja no celular, ou a tela maximizada. Obrigado.");
+
+var index = 0;
+var indexAlbum = 0;
+
+function changeIndex() {
+  titleOne.style.display = "none";
+  titleTwo.style.display = "flex";
+  index++;
+  if (index > 1) {
+    index = 0;
+    titleOne.style.display = "flex";
+    titleTwo.style.display = "none";
+  }
+}
+
+function goToConcert() {
+  header.style.display = "none";
+  cover.style.display = "none";
+  toConcert.style.display = "none";
+  galery.style.display = "flex";
+}
 
 placeImages.src = album[indexAlbum];
 
@@ -87,8 +87,12 @@ function showNextImage() {
   indexAlbum++;
   placeImages.src = album[indexAlbum];
   if (indexAlbum > album.length - 1) {
-    indexAlbum = 0;
-    placeImages.src = album[indexAlbum];
+    divKillButton.style.display = "flex";
+    galery.style.display = "none";
+  } else if (indexAlbum != 0) {
+    previousImage.style.display = "flex";
+  } else {
+    previousImage.style.display = "none";
   }
 }
 
@@ -98,10 +102,15 @@ function showPreviousImage() {
   if (indexAlbum < 0) {
     indexAlbum = album.length - 1;
     placeImages.src = album[indexAlbum];
+  } else if (indexAlbum != 0) {
+    previousImage.style.display = "flex";
+  } else {
+    previousImage.style.display = "none";
   }
 }
 
 function goToFinal() {
+  divKillButton.style.display = "none";
   body.style.height = "100%";
   galery.style.display = "none";
   header.style.display = "flex";
